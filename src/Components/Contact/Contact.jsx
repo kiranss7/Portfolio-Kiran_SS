@@ -17,8 +17,9 @@ const Contact = () => {
         }
         formData.delete("website_trap");
 
-        // Enter your Web3Forms Access Key below
-        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        // Web3Forms Access Key (from environment variable or fallback)
+        const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
+        formData.append("access_key", accessKey);
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
