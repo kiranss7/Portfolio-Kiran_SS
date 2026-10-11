@@ -17,8 +17,11 @@ const Contact = () => {
         }
         formData.delete("website_trap");
 
-        // Web3Forms Access Key (from environment variable or fallback)
-        const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "8f584b06-e01b-4436-b004-1f96f0358500"; formData.append("access_key", accessKey);
+        // Web3Forms Access Key
+        const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "8f584b06-e01b-4436-b004-1f96f0358500";
+        formData.append("access_key", accessKey);
+        formData.append("subject", "New Message from Portfolio Website");
+        formData.append("from_name", "Portfolio");
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
