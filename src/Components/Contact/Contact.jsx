@@ -18,8 +18,7 @@ const Contact = () => {
         formData.delete("website_trap");
 
         // Web3Forms Access Key (from environment variable or fallback)
-        const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
-        formData.append("access_key", accessKey);
+        const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "8f584b06-e01b-4436-b004-1f96f0358500"; formData.append("access_key", accessKey);
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -69,13 +68,13 @@ const Contact = () => {
                 </div>
                 <form onSubmit={onSubmitHandler} className="contact-right">
                     {/* Honeypot field for spam bots */}
-                    <input 
-                        type="text" 
-                        name="website_trap" 
-                        className="honeypot-field" 
-                        tabIndex="-1" 
-                        autoComplete="off" 
-                        aria-hidden="true" 
+                    <input
+                        type="text"
+                        name="website_trap"
+                        className="honeypot-field"
+                        tabIndex="-1"
+                        autoComplete="off"
+                        aria-hidden="true"
                     />
                     <label htmlFor="name">Your Name</label>
                     <input type="text" id="name" placeholder="e.g., John Doe" name="name" required />
