@@ -1,0 +1,123 @@
+.hero, #home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 40px;
+    scroll-margin-top: 100px;
+}
+
+.hero>img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+    box-shadow: 0 0 60px -10px rgba(168, 85, 247, 0.25);
+    border: 2px solid rgba(168, 85, 247, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hero>img:hover {
+    box-shadow: 0 0 75px 0px rgba(168, 85, 247, 0.4);
+    transform: scale(1.02);
+}
+
+.hero h1 {
+    text-align: center;
+    width: 75%;
+    max-width: 900px;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.hero h1 span {
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    width: 60%;
+    max-width: 720px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    color: #D1D5DB;
+}
+
+.hero-action {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.hero-resume-btn {
+    padding: 12px 28px;
+    border-radius: 9999px;
+    background: linear-gradient(to right, #9333ea, #f97316);
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 17px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.hero-resume-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(147, 51, 234, 0.4);
+}
+
+.hero-connect-btn {
+    padding: 12px 28px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 17px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+    cursor: pointer;
+}
+
+.hero-connect-btn:hover {
+    border-color: #ffffff;
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+@media(max-width: 768px) {
+    .hero h1 {
+        font-size: 34px;
+        line-height: 44px;
+        width: 95%;
+    }
+    .hero p {
+        width: 90%;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .hero-action {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 280px;
+    }
+    .hero-resume-btn,
+    .hero-connect-btn {
+        width: 100%;
+    }
+}

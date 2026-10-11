@@ -1,0 +1,184 @@
+.portfolio, #portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 0 10% 80px;
+    scroll-margin-top: 100px;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+}
+
+.portfolio-work-card {
+    border-radius: 10px;
+    border: 4px solid transparent;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    background: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-work-card:hover .portfolio-img {
+    transform: scale(1.1);
+}
+
+.portfolio-work-card:hover {
+    transform: translateY(-5px);
+    border: 4px solid #B415FF;
+    box-shadow: 0 4px 20px rgba(180, 21, 255, 0.3);
+}
+
+.portfolio-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.portfolio-details h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFF;
+    letter-spacing: 0.5px;
+}
+
+.portfolio-desc {
+    font-size: 14px;
+    color: #A0A0A0;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.portfolio-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.tech-badge {
+    padding: 6px 12px;
+    border-radius: 50px;
+    background: rgba(180, 21, 255, 0.05);
+    border: 1px solid rgba(180, 21, 255, 0.2);
+    color: #e0d4ff;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.portfolio-links {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.portfolio-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.demo-btn {
+    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 102.06%);
+    color: #FFF;
+    border: 2px solid transparent;
+}
+
+.github-btn {
+    background: transparent;
+    color: #FFF;
+    border: 2px solid #FFF;
+}
+
+.portfolio-btn:hover {
+    transform: scale(1.05);
+}
+
+.demo-btn:hover {
+    box-shadow: 0 4px 15px rgba(223, 137, 8, 0.4);
+    border-color: #FFF;
+}
+
+.github-btn:hover {
+    border-color: #B415FF;
+}
+
+.portfolio-showmore {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 40px;
+    border-radius: 50px;
+    border: 2px solid #FFF;
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.portfolio-showmore:hover {
+    transform: scale(1.05);
+    border-color: #B415FF;
+    color: #FFF;
+    box-shadow: 0 4px 15px rgba(180, 21, 255, 0.2);
+}
+
+.portfolio-showmore .showmore-icon {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-showmore:hover .showmore-icon {
+    transform: scale(1.15);
+}
+
+/* Responsive styling */
+@media(max-width: 1024px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .portfolio, #portfolio {
+        gap: 50px;
+        padding: 0 5% 50px;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-showmore {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+    .portfolio-showmore .showmore-icon {
+        font-size: 20px;
+    }
+}
