@@ -1,4 +1,5 @@
-.education, #education {
+.education,
+#education {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,31 +52,28 @@
     letter-spacing: 0.5px;
 }
 
-.education-coursework {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #9CA3AF;
-    line-height: 1.5;
-}
 
 @media(max-width: 768px) {
-    .education, #education {
+
+    .education,
+    #education {
         gap: 50px;
         padding: 0 5% 50px;
     }
+
     .education-item {
         padding: 25px;
     }
+
     .education-item h2 {
         font-size: 24px;
     }
+
     .education-item h3 {
         font-size: 18px;
     }
+
     .education-meta {
         font-size: 16px;
-    }
-    .education-coursework {
-        font-size: 14px;
     }
 }
