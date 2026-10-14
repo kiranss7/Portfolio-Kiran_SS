@@ -6,7 +6,7 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 const Portfolio = () => {
     return (
         <section id='portfolio' className='portfolio'>
-            <div id="projects" style={{ position: 'relative', top: '-100px' }} aria-hidden="true"></div>
+            <div id="projects" style={{ position: 'absolute', top: '-100px' }} aria-hidden="true"></div>
             <div className="title-box">
                 <h1>Projects</h1>
                 <img src={theme_pattern} alt="pattern" loading="lazy" />
