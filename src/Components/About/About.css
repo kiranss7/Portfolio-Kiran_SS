@@ -1,4 +1,5 @@
-.about, #about {
+.about,
+#about {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,37 +132,47 @@
 
 /* Responsive styling */
 @media(max-width: 768px) {
-    .about, #about {
+
+    .about,
+    #about {
         gap: 50px;
         padding: 32px 5% 50px;
         scroll-margin-top: 80px;
     }
+
     .about-sections {
         flex-direction: column;
         gap: 40px;
     }
+
     .about-left img {
         width: 250px;
         position: static;
     }
+
     .about-para {
         font-size: 18px;
         line-height: 30px;
     }
+
     .about-tech-stack {
         gap: 20px;
     }
+
     .tech-category-title {
         font-size: 17px;
     }
+
     .tech-pills {
         gap: 10px;
     }
+
     .tech-pill {
         padding: 7px 14px;
         font-size: 14px;
         gap: 8px;
     }
+
     .tech-pill-icon {
         font-size: 16px;
     }

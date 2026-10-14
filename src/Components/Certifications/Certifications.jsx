@@ -19,7 +19,7 @@ const certificationsData = [
         date: "2024 – 2025",
         credentialId: "PS1594 / Batch #002",
         credentialLabel: "Credential / Batch ID",
-        skills: ['Python', 'Full Stack Architecture', 'REST APIs', 'Database Design'],
+        skills: ['Python', 'MySQL', 'HTML', 'CSS', 'JavaScript', 'React'],
         pdfPath: "/certificates/Python_Full_Stack.pdf",
         verifyLink: null
     },
